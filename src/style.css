@@ -12,7 +12,7 @@
   }
 
   body {
-    @apply h-screen bg-(--green200) flex justify-start items-center p-4 text-(--grey900) font-normal;
+    @apply h-screen bg-(--green200) flex justify-center items-start sm:items-center p-4 text-(--grey900) font-normal;
     font-family: "Karla", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;

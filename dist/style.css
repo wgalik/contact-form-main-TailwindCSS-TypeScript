@@ -411,13 +411,16 @@
   body {
     display: flex;
     height: 100vh;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
     background-color: var(--green200);
     padding: calc(var(--spacing) * 4);
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
     color: var(--grey900);
+    @media (width >= 40rem) {
+      align-items: center;
+    }
     font-family: "Karla", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
