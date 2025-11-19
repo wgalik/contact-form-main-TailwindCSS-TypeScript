@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "tailwind": "npx @tailwindcss/cli -i ./src/style.css -o ./dist/style.css --watch",
+    "watch:ts": "tsc --watch",
+    "watch": "concurrently \"npm run tailwind\"   \"npm run watch:ts\"",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "postcss-cli": "^11.0.1",
+    "typescript": "^5.9.3"
+  }
+}

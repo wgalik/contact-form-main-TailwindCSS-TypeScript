@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <script src="./dist/script.js" defer></script>
+  </head>
+  <body>
+    <main class="bg-white p-8 rounded-2xl w-full max-w-[735px] relative">
+      <h1 class="text-2xl font-bold mb-2">Contact Us</h1>
+
+      <form class="grid gap-y-0 gap-x-4 sm:grid-cols-2" novalidate>
+        <label for="first-name" class="label sm:col-start-1 sm:col-end-2"
+          >First Name</label
+        >
+        <input
+          class="input sm:col-start-1 sm:col-end-2"
+          type="text"
+          name="first-name"
+          id="first-name"
+        />
+        <span
+          class="error-message input-error-message sm:col-start-1 sm:col-end-2"
+          id="first-name-error"
+          hidden
+          >This field is required</span
+        >
+
+        <label
+          for="last-name"
+          class="label sm:col-start-2 sm:col-end-3 sm:row-start-1"
+          >Last Name
+        </label>
+
+        <input
+          class="input sm:col-start-2 sm:col-end-3 sm:row-start-2 sm:row-end-3"
+          type="text"
+          name="last-name"
+          id="last-name"
+        />
+        <span
+          class="error-message input-error-message sm:col-start-2 sm:col-end-3"
+          id="last-name-error"
+          hidden
+          >This field is required</span
+        >
+
+        <label for="email" class="label sm:col-span-full">Email Address</label>
+
+        <input
+          class="input sm:col-span-full"
+          type="email"
+          name="email"
+          id="email"
+        />
+
+        <span class="error-message input-error-message" id="email-error" hidden
+          >This field is required</span
+        >
+        <span
+          class="error-message input-error-message"
+          id="invalid-email-error"
+          hidden
+        >
+          Please enter a valid email address</span
+        >
+
+        <fieldset class="grid sm:grid-cols-2 sm:gap-x-4 sm:col-span-full mt-4">
+          <legend class="label sm:col-span-full">Query Type</legend>
+
+          <label for="general" class="fieldset-label"
+            ><input
+              class="fieldset-input"
+              type="radio"
+              name="query"
+              id="general"
+              value="General Enquiry"
+            />
+            General Enquiry</label
+          >
+          <label for="support" class="fieldset-label"
+            ><input
+              class="fieldset-input"
+              type="radio"
+              name="query"
+              id="support"
+              value="Support Request"
+            />
+            Support Request</label
+          >
+          <span class="error-message mt-0" id="fieldset-input-error" hidden>
+            Please select a query type</span
+          >
+        </fieldset>
+
+        <label for="textarea" class="label sm:col-span-full">Message</label>
+        <textarea
+          class="input sm:col-span-full w-full h-60 resize-none sm:h-24"
+          name="message"
+          id="textarea"
+        ></textarea>
+        <span
+          class="error-message input-error-message"
+          id="textarea-error"
+          hidden
+          >This field is required
+        </span>
+
+        <label
+          for="checkbox"
+          class="label relative pl-8 sm:col-span-full cursor-pointer mt-8 mb-8"
+          ><input
+            class="absolute top-1/2 left-0 -translate-y-1/2 accent-(--green600) cursor-pointer"
+            type="checkbox"
+            name="checkbox"
+            id="checkbox"
+          />
+          I consent to being contacted by the team </label
+        ><span
+          class="error-message sm:col-span-full -mt-6 mb-8"
+          id="checkbox-error"
+          hidden
+          >To submit this form, please consent to being contacted</span
+        >
+
+        <button
+          type="submit"
+          class="w-full h-12 bg-(--green600) p-2 text-white font-bold text-sm rounded-lg sm:col-span-full cursor-pointer hover:bg-(--grey900) transition duration-300 ease-in-out"
+        >
+          Submit
+        </button>
+      </form>
+      <div
+        id="popup"
+        class="w-full max-w-[450px] fixed top-10 sm:absolute sm:-top-20 left-1/2 -translate-x-1/2 bg-(--grey900) rounded-lg p-4 z-99"
+        hidden
+      >
+        <img
+          src="./assets/images/icon-success-check.svg"
+          alt="icon-success"
+          class="inline-block pr-1 aria-hidden"
+        />
+        <h2 class="text-white font-bold inline-block">Message Sent!</h2>
+        <p class="text-white text-sm pt-2">
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
