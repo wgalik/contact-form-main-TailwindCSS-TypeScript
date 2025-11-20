@@ -1,51 +1,86 @@
 # Frontend Mentor – Contact Form Solution
 
-This is a solution to the Contact Form challenge from Frontend Mentor.  
-Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is my solution for the **Contact Form** challenge from Frontend Mentor.  
+The project focuses on building an accessible, responsive form using **HTML**, **Tailwind CSS**, and **TypeScript**, with custom validation and ARIA support.
 
-## Demo
+## 🚀 Live Demo
 
 [Site](https://wgalik.github.io/contact-form-main-TailwindCSS-TypeScript/)
 
-## 📸 Overview
+## 🛠 Built With
 
-The project is a fully responsive and accessible contact form built using HTML, Tailwind CSS, and TypeScript.
-It includes:
+- **HTML5** – semantic structure, accessible form markup
+- **Tailwind CSS** – utility-first styling, custom CSS variables
+- **TypeScript** – form validation logic
+- **ARIA attributes** – improved accessibility for screen readers
+- **Custom validation** – no external libraries
 
-- Real-time form validation
-- Custom error messages
-- Dynamic radio and checkbox validation
-- A success popup message
-- Clean and modern UI based on the challenge design
+---
 
-## 🔧 Built With
+## ✨ Features
 
-- **HTML5** – Semantic markup
-- **Tailwind CSS** – Utility-first styling with custom layers
-- **TypeScript** – Form validation logic
-- **Google Fonts** (Karla)
+### ✔ Fully accessible form
 
-## 🎯 Features
+- `aria-describedby` links all inputs with error messages
+- `aria-invalid` dynamically indicates invalid fields
+- `role="alert"` ensures error messages and popup are read by screen readers
+- Proper use of `fieldset`, `legend`, and `label`
+- Keyboard-friendly UI
 
-- Validates:
-  - First Name
-  - Last Name
-  - Email format
-  - Query type (radio buttons)
-  - Message textarea
-  - Consent checkbox
-- Shows error messages dynamically
-- Displays a success popup if all fields are valid
-- Fully responsive layout
-- Modern Tailwind design system using custom variables
+### ✔ Custom validation
+
+- Empty fields detection
+- Email format validation
+- Query type (radio) selection validation
+- Checkbox consent validation
+- Success popup shown only when all inputs pass validation
+
+### ✔ Responsive design
+
+- Tailwind CSS grid and utilities
+- Mobile-first layout
+
+### ✔ Clean and modern UI
+
+- Custom color variables
+- Smooth transitions
+- Focus and hover states
+
+---
+
+## 📄 Code Overview
+
+### **HTML**
+
+The form uses semantic elements and ARIA attributes to ensure accessibility:
+
+- `aria-describedby` for pairing fields with error messages
+- `aria-invalid` dynamically set via TypeScript
+- `role="alert"` for instant screen reader feedback
+- Hidden success popup that becomes visible when the form is valid
+
+### **TypeScript**
+
+The script handles:
+
+- Input validation for text fields
+- Email format check using regex
+- Radio input validation
+- Checkbox validation
+- Managing `aria-invalid` and `aria-describedby` states
+- Displaying the success popup only when no errors are present
+
+---
 
 ## 🧠 What I Learned
 
-- Managing form validation with TypeScript
-- Using query selectors with strong typing
-- Building reusable components with Tailwind’s @layer
-- Handling real-time errors and conditional UI states
-- Designing clean and responsive layouts using utility classes
+- How to structure a fully accessible form using ARIA
+- How to manage dynamic accessibility attributes in TypeScript
+- Tailwind components with custom CSS layers
+- Building custom validation logic without external libraries
+- Improving UX while keeping the project WCAG-friendly
+
+---
 
 ## 🌟 Acknowledgements
 

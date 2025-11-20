@@ -34,8 +34,10 @@
           type="text"
           name="first-name"
           id="first-name"
+          aria-describedby="first-name-error"
         />
         <span
+          role="alert"
           class="error-message input-error-message sm:col-start-1 sm:col-end-2"
           id="first-name-error"
           hidden
@@ -53,8 +55,10 @@
           type="text"
           name="last-name"
           id="last-name"
+          aria-describedby="last-name-error"
         />
         <span
+          role="alert"
           class="error-message input-error-message sm:col-start-2 sm:col-end-3"
           id="last-name-error"
           hidden
@@ -68,12 +72,18 @@
           type="email"
           name="email"
           id="email"
+          aria-describedby="email-error"
         />
 
-        <span class="error-message input-error-message" id="email-error" hidden
+        <span
+          role="alert"
+          class="error-message input-error-message"
+          id="email-error"
+          hidden
           >This field is required</span
         >
         <span
+          role="alert"
           class="error-message input-error-message"
           id="invalid-email-error"
           hidden
@@ -91,6 +101,7 @@
               name="query"
               id="general"
               value="General Enquiry"
+              aria-describedby="fieldset-input-error"
             />
             General Enquiry</label
           >
@@ -101,10 +112,16 @@
               name="query"
               id="support"
               value="Support Request"
+              aria-describedby="fieldset-input-error"
             />
             Support Request</label
           >
-          <span class="error-message mt-0" id="fieldset-input-error" hidden>
+          <span
+            role="alert"
+            class="error-message mt-0"
+            id="fieldset-input-error"
+            hidden
+          >
             Please select a query type</span
           >
         </fieldset>
@@ -114,8 +131,10 @@
           class="input sm:col-span-full w-full h-60 resize-none sm:h-24"
           name="message"
           id="textarea"
+          aria-describedby="textarea-error"
         ></textarea>
         <span
+          role="alert"
           class="error-message input-error-message"
           id="textarea-error"
           hidden
@@ -130,9 +149,11 @@
             type="checkbox"
             name="checkbox"
             id="checkbox"
+            aria-describedby="checkbox-error"
           />
           I consent to being contacted by the team </label
         ><span
+          role="alert"
           class="error-message sm:col-span-full -mt-6 mb-8"
           id="checkbox-error"
           hidden
@@ -148,6 +169,7 @@
       </form>
       <div
         id="popup"
+        role="alert"
         class="w-full max-w-[450px] fixed top-10 sm:absolute sm:-top-20 left-1/2 -translate-x-1/2 bg-(--grey900) rounded-lg p-4 z-99"
         hidden
       >
