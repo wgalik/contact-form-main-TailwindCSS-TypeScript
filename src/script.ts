@@ -1,31 +1,31 @@
 const checkbox = document.getElementById("checkbox") as HTMLInputElement;
 const checkboxError = document.getElementById(
-  "checkbox-error"
+  "checkbox-error",
 ) as HTMLSpanElement;
 const errorMessages =
   document.querySelectorAll<HTMLSpanElement>(".error-message");
 const inputErrorMessages = document.querySelectorAll<HTMLSpanElement>(
-  ".input-error-message"
+  ".input-error-message",
 );
 const fieldsetInputs =
   document.querySelectorAll<HTMLInputElement>(".fieldset-input");
 const form = document.querySelector("form") as HTMLFormElement;
 const fieldsetInputError = document.getElementById(
-  "fieldset-input-error"
+  "fieldset-input-error",
 ) as HTMLSpanElement;
 const inputs = document.querySelectorAll<HTMLInputElement>(".input");
 const emailInput = [...inputs].find(
-  (input) => input.id === "email"
+  (input) => input.id === "email",
 ) as HTMLInputElement;
 const invalidEmailError = document.getElementById(
-  "invalid-email-error"
+  "invalid-email-error",
 ) as HTMLSpanElement;
 const popup = document.getElementById("popup") as HTMLDivElement;
 const regex = /^[^@]+@[A-Za-z0-9.-]{2,}\.[A-Za-z]{2,}$/;
 
 const validation = () => {
   const isRadioChecked: number = [...fieldsetInputs].findIndex(
-    (input) => input.checked
+    (input) => input.checked,
   );
 
   inputs?.forEach((input) => {
@@ -48,7 +48,7 @@ const validation = () => {
   if (isRadioChecked < 0) {
     fieldsetInputError.removeAttribute("hidden");
     fieldsetInputs.forEach((input) =>
-      input.setAttribute("aria-invalid", "true")
+      input.setAttribute("aria-invalid", "true"),
     );
   }
 
@@ -62,7 +62,7 @@ const validation = () => {
 
 const showPopup = () => {
   const isError = [...errorMessages].some(
-    (errorMessage) => !errorMessage.hidden
+    (errorMessage) => !errorMessage.hidden,
   );
 
   if (!isError) popup.removeAttribute("hidden");

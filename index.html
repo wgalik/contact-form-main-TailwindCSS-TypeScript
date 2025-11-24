@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -22,10 +22,10 @@
     <script src="./dist/script.js" defer></script>
   </head>
   <body>
-    <main class="bg-white p-8 rounded-2xl w-full max-w-[735px] relative">
-      <h1 class="text-2xl font-bold mb-2">Contact Us</h1>
+    <main class="relative w-full max-w-[735px] rounded-2xl bg-white p-8">
+      <h1 class="mb-2 text-2xl font-bold">Contact Us</h1>
 
-      <form class="grid gap-y-0 gap-x-4 sm:grid-cols-2" novalidate>
+      <form class="grid gap-x-4 gap-y-0 sm:grid-cols-2" novalidate>
         <label for="first-name" class="label sm:col-start-1 sm:col-end-2"
           >First Name</label
         >
@@ -91,7 +91,7 @@
           Please enter a valid email address</span
         >
 
-        <fieldset class="grid sm:grid-cols-2 sm:gap-x-4 sm:col-span-full mt-4">
+        <fieldset class="mt-4 grid sm:col-span-full sm:grid-cols-2 sm:gap-x-4">
           <legend class="label sm:col-span-full">Query Type</legend>
 
           <label for="general" class="fieldset-label"
@@ -128,7 +128,7 @@
 
         <label for="textarea" class="label sm:col-span-full">Message</label>
         <textarea
-          class="input sm:col-span-full w-full h-60 resize-none sm:h-24"
+          class="input h-60 w-full resize-none sm:col-span-full sm:h-24"
           name="message"
           id="textarea"
           aria-describedby="textarea-error"
@@ -143,9 +143,9 @@
 
         <label
           for="checkbox"
-          class="label relative pl-8 sm:col-span-full cursor-pointer mt-8 mb-8"
+          class="label relative mt-8 mb-8 cursor-pointer pl-8 sm:col-span-full"
           ><input
-            class="absolute top-1/2 left-0 -translate-y-1/2 accent-(--green600) cursor-pointer"
+            class="absolute top-1/2 left-0 -translate-y-1/2 cursor-pointer accent-(--green600)"
             type="checkbox"
             name="checkbox"
             id="checkbox"
@@ -154,7 +154,7 @@
           I consent to being contacted by the team </label
         ><span
           role="alert"
-          class="error-message sm:col-span-full -mt-6 mb-8"
+          class="error-message -mt-6 mb-8 sm:col-span-full"
           id="checkbox-error"
           hidden
           >To submit this form, please consent to being contacted</span
@@ -162,7 +162,7 @@
 
         <button
           type="submit"
-          class="w-full h-12 bg-(--green600) p-2 text-white font-bold text-sm rounded-lg sm:col-span-full cursor-pointer hover:bg-(--grey900) transition duration-300 ease-in-out"
+          class="h-12 w-full cursor-pointer rounded-lg bg-(--green600) p-2 text-sm font-bold text-white transition duration-300 ease-in-out hover:bg-(--grey900) sm:col-span-full"
         >
           Submit
         </button>
@@ -170,16 +170,16 @@
       <div
         id="popup"
         role="alert"
-        class="w-full max-w-[450px] fixed top-10 sm:absolute sm:-top-20 left-1/2 -translate-x-1/2 bg-(--grey900) rounded-lg p-4 z-99"
+        class="fixed top-10 left-1/2 z-99 w-full max-w-[450px] -translate-x-1/2 rounded-lg bg-(--grey900) p-4 sm:absolute sm:-top-20"
         hidden
       >
         <img
           src="./assets/images/icon-success-check.svg"
           alt="icon-success"
-          class="inline-block pr-1 aria-hidden"
+          class="aria-hidden inline-block pr-1"
         />
-        <h2 class="text-white font-bold inline-block">Message Sent!</h2>
-        <p class="text-white text-sm pt-2">
+        <h2 class="inline-block font-bold text-white">Message Sent!</h2>
+        <p class="pt-2 text-sm text-white">
           Thanks for completing the form. We'll be in touch soon!
         </p>
       </div>

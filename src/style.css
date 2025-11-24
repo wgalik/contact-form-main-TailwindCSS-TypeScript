@@ -5,14 +5,13 @@
     --green200: hsl(148, 38%, 91%);
     --green600: hsl(169, 82%, 27%);
     --red: hsl(0, 66%, 54%);
-
     --white: hsl(0, 0%, 100%);
     --grey500: hsl(186, 15%, 59%);
     --grey900: hsl(187, 24%, 22%);
   }
 
   body {
-    @apply h-screen bg-(--green200) flex justify-center items-start sm:items-center p-4 text-(--grey900) font-normal;
+    @apply flex h-screen items-start justify-center bg-(--green200) p-4 font-normal text-(--grey900) sm:items-center;
     font-family: "Karla", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -22,25 +21,25 @@
 
 @layer components {
   .label {
-    @apply w-full  text-sm mt-4 mb-2;
+    @apply mt-4 mb-2 w-full text-sm;
   }
   legend::after,
   label::after {
     content: "*";
-    @apply text-(--green600) ps-2;
+    @apply ps-2 text-(--green600);
   }
 
   .input {
-    @apply w-full h-10 border rounded-lg p-4 accent-(--green600) outline-0 focus-visible:border focus-visible:border-(--green600) cursor-pointer hover:border-(--green600) transition  duration-300 ease-in-out;
+    @apply h-10 w-full cursor-pointer rounded-lg border p-4 accent-(--green600) outline-0 transition duration-300 ease-in-out hover:border-(--green600) focus-visible:border focus-visible:border-(--green600);
   }
   .error-message {
-    @apply text-sm text-(--red) mt-2;
+    @apply mt-2 text-sm text-(--red);
   }
 
   .fieldset-label {
-    @apply w-full border rounded-lg relative pl-10 h-10 leading-10 has-checked:border has-checked:border-(--green600) has-checked:bg-(--green200) cursor-pointer focus-visible:border focus-visible:border-(--green600)  hover:border-(--green600) mb-2 transition  duration-300 ease-in-out;
+    @apply relative mb-2 h-10 w-full cursor-pointer rounded-lg border pl-10 leading-10 transition duration-300 ease-in-out hover:border-(--green600) focus-visible:border focus-visible:border-(--green600) has-checked:border has-checked:border-(--green600) has-checked:bg-(--green200);
   }
   .fieldset-input {
-    @apply absolute top-1/2 left-4 -translate-y-1/2 accent-(--green600) border rounded-lg  focus-visible:border focus-visible:border-(--green600) cursor-pointer hover:border-(--green600) transition  duration-300 ease-in-out;
+    @apply absolute top-1/2 left-4 -translate-y-1/2 cursor-pointer rounded-lg border accent-(--green600) transition duration-300 ease-in-out hover:border-(--green600) focus-visible:border focus-visible:border-(--green600);
   }
 }
